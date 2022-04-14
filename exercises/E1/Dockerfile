@@ -1,6 +1,6 @@
 FROM python:3.10
 
-RUN pip3 install jupyterlab
+#RUN Something to install JupyterLab
 
 COPY Test_Notebook.ipynb /work/Test_Notebook.ipynb
 

@@ -1,6 +1,6 @@
 FROM python:3.10
 
-RUN pip3 install jupyterlab ipyleaflet ipympl
+# RUN Something to have JupyterLab, ipympl and ipyleaflet installed 
 
 COPY Test_Notebook.ipynb /work/Test_Notebook.ipynb
 

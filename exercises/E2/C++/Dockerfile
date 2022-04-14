@@ -1,6 +1,7 @@
-FROM fedora:36
+# feel free to change your base image
+FROM fedora:36 
 
-RUN dnf update -y && dnf install -y conda && conda create -y --name xeus xeus-cling jupyterlab -c conda-forge
+#RUN Something to have jupyterlab and Xeus-cling kernel for example
 
 COPY Test_Notebook.ipynb /work/Test_Notebook.ipynb
 
@@ -8,4 +9,4 @@ WORKDIR /work
 
 EXPOSE 8080
 
-ENTRYPOINT conda run --no-capture-output -n xeus jupyter-lab --port 8080 --ip 0.0.0.0 --allow-root
+# ENTRYPOINT depends on what you have done before
